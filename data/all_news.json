@@ -1,10 +1,298 @@
 [
   {
-    "title": "等待首次抓取...",
-    "url": "#",
-    "source": "全网热榜",
-    "hot": "数据将在首次自动更新后显示",
-    "platform": "all",
-    "fetched_at": "2026-03-02T00:00:00"
+    "title": "模拟微博热搜 1",
+    "url": "https://s.weibo.com/",
+    "source": "微博",
+    "hot": "模拟",
+    "platform": "weibo",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "模拟微博热搜 2",
+    "url": "https://s.weibo.com/",
+    "source": "微博",
+    "hot": "模拟",
+    "platform": "weibo",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "459 â 185 åï¼ç¦è¾å® WMF ççä¸¤ç¨ä¸ç²é 3.8 æ 38 èéå¯¹è±¡éå¦å¦",
+    "url": "https://lapin.ithome.com/html/digi/924804.htm",
+    "source": "IT 之家",
+    "hot": "热门",
+    "platform": "ithome",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "çéæ°çé¿ç»æ£ï¼å®æ¯æ¯ç¡è¡£å¥è£ 51 åèµ·æ¢å­£ååè½¦ï¼é¿æ¬¾ 83 åï¼",
+    "url": "https://lapin.ithome.com/html/digi/924979.htm",
+    "source": "IT 之家",
+    "hot": "热门",
+    "platform": "ithome",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "çº¦ 79 æ¬¾å¯éï¼æ£®é©¬è¿å¨é / é´å­ç­ 55 åä¹è¿æ¸ä»ååè½¦",
+    "url": "https://lapin.ithome.com/html/digi/925004.htm",
+    "source": "IT 之家",
+    "hot": "热门",
+    "platform": "ithome",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "æ°çé¿åèå¥½æ£ï¼å®ææ¯çº¯æ£æ´è¸å·¾ 30 å 480 æ½å¼å­¦éå¤ï¼äº¬ä¸ 44 åï¼",
+    "url": "https://lapin.ithome.com/html/digi/924994.htm",
+    "source": "IT 之家",
+    "hot": "热门",
+    "platform": "ithome",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "2.8 ç±³å¯è°èï¼ç¹æ­¥è·³ç»³ 7.9 åæ°ä½åééå¤ï¼èç£¨ PVC ç»³ï¼",
+    "url": "https://lapin.ithome.com/html/digi/924947.htm",
+    "source": "IT 之家",
+    "hot": "热门",
+    "platform": "ithome",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "äº¬ä¸ 32.7 åï¼æ¾³å®æ´åé²ç­ 2 ç¶ 25.8 åæ°ä½ï¼åç¶è£ 15.2 åï¼",
+    "url": "https://lapin.ithome.com/html/digi/924922.htm",
+    "source": "IT 之家",
+    "hot": "热门",
+    "platform": "ithome",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "åå¼ ä»é 4 åé±ï¼è´å ç¾æ¹¿åçº¸ 16.9 å 400 æ½éå¤ï¼ä½è¿å¤å¤ç¾äº¿è¡¥è´´ï¼",
+    "url": "https://lapin.ithome.com/html/digi/924890.htm",
+    "source": "IT 之家",
+    "hot": "热门",
+    "platform": "ithome",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "ä½æ¸©ççéæ²¹ç¸ï¼æ¬§æåèèæç²éº¦ç 8 ä¸¤ 14.9 åä¹è¿åè½¦ï¼å¤©ç«è´µ 5 åï¼",
+    "url": "https://lapin.ithome.com/html/digi/924907.htm",
+    "source": "IT 之家",
+    "hot": "热门",
+    "platform": "ithome",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "åéé­ç¼å¤ï¼ç è½»æ è®°å¿æ£å¤´æ 1.7 åãè°é  4.3 åææ¢æ ï¼èµ éè´§å®ï¼",
+    "url": "https://lapin.ithome.com/html/digi/924899.htm",
+    "source": "IT 之家",
+    "hot": "热门",
+    "platform": "ithome",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "40° å¤§æå¹ï¼ç¦æ´¾æ«æ¯å£°æ³¢çµå¨çå· 41 åä¹è¿åè½¦ï¼å£°æ³¢çä½è³ 31.9 åï¼",
+    "url": "https://lapin.ithome.com/html/digi/924869.htm",
+    "source": "IT 之家",
+    "hot": "热门",
+    "platform": "ithome",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "",
+    "url": "https://juejin.cn/post/",
+    "source": "掘金",
+    "hot": "👍 0",
+    "platform": "juejin",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "",
+    "url": "https://juejin.cn/post/",
+    "source": "掘金",
+    "hot": "👍 0",
+    "platform": "juejin",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "",
+    "url": "https://juejin.cn/post/",
+    "source": "掘金",
+    "hot": "👍 0",
+    "platform": "juejin",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "",
+    "url": "https://juejin.cn/post/",
+    "source": "掘金",
+    "hot": "👍 0",
+    "platform": "juejin",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "",
+    "url": "https://juejin.cn/post/",
+    "source": "掘金",
+    "hot": "👍 0",
+    "platform": "juejin",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "",
+    "url": "https://juejin.cn/post/",
+    "source": "掘金",
+    "hot": "👍 0",
+    "platform": "juejin",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "",
+    "url": "https://juejin.cn/post/",
+    "source": "掘金",
+    "hot": "👍 0",
+    "platform": "juejin",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "",
+    "url": "https://juejin.cn/post/",
+    "source": "掘金",
+    "hot": "👍 0",
+    "platform": "juejin",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "",
+    "url": "https://juejin.cn/post/",
+    "source": "掘金",
+    "hot": "👍 0",
+    "platform": "juejin",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "",
+    "url": "https://juejin.cn/post/",
+    "source": "掘金",
+    "hot": "👍 0",
+    "platform": "juejin",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "",
+    "url": "https://juejin.cn/post/",
+    "source": "掘金",
+    "hot": "👍 0",
+    "platform": "juejin",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "",
+    "url": "https://juejin.cn/post/",
+    "source": "掘金",
+    "hot": "👍 0",
+    "platform": "juejin",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "",
+    "url": "https://juejin.cn/post/",
+    "source": "掘金",
+    "hot": "👍 0",
+    "platform": "juejin",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "",
+    "url": "https://juejin.cn/post/",
+    "source": "掘金",
+    "hot": "👍 0",
+    "platform": "juejin",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "",
+    "url": "https://juejin.cn/post/",
+    "source": "掘金",
+    "hot": "👍 0",
+    "platform": "juejin",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "moeru-ai /airi - 💖🧸 Self hosted, you-owned Grok Companion, a contai...",
+    "url": "https://github.com/moeru-ai/airi",
+    "source": "GitHub",
+    "hot": "Trending",
+    "platform": "github",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "ruvnet /wifi-densepose - WiFi DensePose turns commodity WiFi signals into r...",
+    "url": "https://github.com/ruvnet/wifi-densepose",
+    "source": "GitHub",
+    "hot": "Trending",
+    "platform": "github",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "ruvnet /ruflo - 🌊 The leading agent orchestration platform for Cla...",
+    "url": "https://github.com/ruvnet/ruflo",
+    "source": "GitHub",
+    "hot": "Trending",
+    "platform": "github",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "microsoft /markitdown - Python tool for converting files and office docume...",
+    "url": "https://github.com/microsoft/markitdown",
+    "source": "GitHub",
+    "hot": "Trending",
+    "platform": "github",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "bytedance /deer-flow - An open-source SuperAgent harness that researches,...",
+    "url": "https://github.com/bytedance/deer-flow",
+    "source": "GitHub",
+    "hot": "Trending",
+    "platform": "github",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "alibaba /OpenSandbox - OpenSandbox is a general-purpose sandbox platform ...",
+    "url": "https://github.com/alibaba/OpenSandbox",
+    "source": "GitHub",
+    "hot": "Trending",
+    "platform": "github",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "Shubhamsaboo /awesome-llm-apps - Collection of awesome LLM apps with AI Agents and ...",
+    "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+    "source": "GitHub",
+    "hot": "Trending",
+    "platform": "github",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "K-Dense-AI /claude-scientific-skills - A set of ready to use Agent Skills for research, s...",
+    "url": "https://github.com/K-Dense-AI/claude-scientific-skills",
+    "source": "GitHub",
+    "hot": "Trending",
+    "platform": "github",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "basecamp /omarchy - Beautiful, Modern & Opinionated Linux...",
+    "url": "https://github.com/basecamp/omarchy",
+    "source": "GitHub",
+    "hot": "Trending",
+    "platform": "github",
+    "fetched_at": "2026-03-02T13:49:37.320773"
+  },
+  {
+    "title": "X-PLUG /MobileAgent - Mobile-Agent: The Powerful GUI Agent Family...",
+    "url": "https://github.com/X-PLUG/MobileAgent",
+    "source": "GitHub",
+    "hot": "Trending",
+    "platform": "github",
+    "fetched_at": "2026-03-02T13:49:37.320773"
   }
 ]

@@ -182,7 +182,7 @@ class NewsFetcher:
             data = response.json()
             
             items = []
-            for item in data.get('data', []):[:15]
+            for item in data.get('data', [])[:15]:
                 article = item.get('article_info', {})
                 items.append({
                     'title': article.get('title', ''),
