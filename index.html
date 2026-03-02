@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全网热榜 - 实时新闻聚合</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        
+        header h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .update-info {
+            background: #f0f0f0;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #555;
+        }
+        
+        .platform-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+        
+        .platform-tab {
+            background: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            font-weight: 600;
+            color: #667eea;
+        }
+        
+        .platform-tab:hover,
+        .platform-tab.active {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        }
+        
+        .news-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, #667eea, #764ba2);
+        }
+        
+        .news-rank {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .news-card h3 {
+            color: #333;
+            font-size: 1.1em;
+            margin-bottom: 12px;
+            line-height: 1.5;
+            padding-right: 40px;
+        }
+        
+        .news-card h3 a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .news-card h3 a:hover {
+            color: #667eea;
+        }
+        
+        .news-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85em;
+            color: #888;
+        }
+        
+        .news-source {
+            background: #f0f0f0;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+        
+        .news-source.zhihu { background: #0084ff; color: white; }
+        .news-source.weibo { background: #e6162d; color: white; }
+        .news-source['36kr'] { background: #3c86f8; color: white; }
+        .news-source.huxiu { background: #000; color: white; }
+        .news-source.ithome { background: #f57224; color: white; }
+        .news-source.juejin { background: #1e80ff; color: white; }
+        .news-source.github { background: #333; color: white; }
+        
+        .news-hot {
+            color: #ff6b6b;
+            font-weight: 600;
+        }
+        
+        .subscribe-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+        
+        .subscribe-section h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .subscribe-section p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        footer {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: white;
+            font-size: 1.2em;
+        }
+        
+        @media (max-width: 768px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            .platform-tabs {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔥 全网热榜</h1>
+            <p>实时聚合知乎、微博、36 氪、虎嗅、IT 之家、掘金、GitHub 等热门新闻</p>
+            <div class="update-info" id="updateTime">最后更新：加载中...</div>
+        </header>
+        
+        <div class="subscribe-section">
+            <h2>📧 订阅日报/周报</h2>
+            <p>每日早 8 点推送前日热榜 TOP20，每周日推送本周精选</p>
+            <p style="color: #999; font-size: 0.9em;">💡 当前版本：访问 GitHub 仓库订阅（后续将增加在线订阅功能）</p>
+        </div>
+        
+        <div class="platform-tabs" id="platformTabs">
+            <div class="platform-tab active" data-platform="all">全部</div>
+            <div class="platform-tab" data-platform="zhihu">知乎</div>
+            <div class="platform-tab" data-platform="weibo">微博</div>
+            <div class="platform-tab" data-platform="36kr">36 氪</div>
+            <div class="platform-tab" data-platform="huxiu">虎嗅</div>
+            <div class="platform-tab" data-platform="ithome">IT 之家</div>
+            <div class="platform-tab" data-platform="juejin">掘金</div>
+            <div class="platform-tab" data-platform="github">GitHub</div>
+        </div>
+        
+        <div class="news-grid" id="newsGrid">
+            <div class="loading">🔄 正在加载最新热榜...</div>
+        </div>
+        
+        <footer>
+            <p>🚀 数据每 5 分钟自动更新 | 由 AI 自动抓取并整理</p>
+            <p style="margin-top: 10px;">
+                <a href="https://github.com/614153770/news-aggregator" target="_blank" style="color: #667eea; text-decoration: none;">GitHub 仓库</a>
+                | 
+                <a href="https://614153770.github.io/auto-tech-content/" target="_blank" style="color: #667eea; text-decoration: none;">AI Tech Daily</a>
+            </p>
+            <p style="margin-top: 10px; font-size: 0.85em; color: #999;">
+                注：所有新闻来源于各平台公开数据，如有侵权请联系删除
+            </p>
+        </footer>
+    </div>
+    
+    <script>
+        let allNews = [];
+        let currentPlatform = 'all';
+        
+        // 加载数据
+        async function loadNews() {
+            try {
+                const response = await fetch('data/all_news.json?t=' + Date.now());
+                if (response.ok) {
+                    allNews = await response.json();
+                    renderNews();
+                    updateUpdateTime();
+                } else {
+                    document.getElementById('newsGrid').innerHTML = 
+                        '<div class="loading">⚠️ 数据加载失败，请稍后刷新</div>';
+                }
+            } catch (error) {
+                console.log('加载失败:', error);
+                document.getElementById('newsGrid').innerHTML = 
+                    '<div class="loading">⚠️ 数据加载失败，请稍后刷新</div>';
+            }
+        }
+        
+        // 渲染新闻
+        function renderNews() {
+            const grid = document.getElementById('newsGrid');
+            
+            let filtered = allNews;
+            if (currentPlatform !== 'all') {
+                filtered = allNews.filter(item => item.platform === currentPlatform);
+            }
+            
+            if (filtered.length === 0) {
+                grid.innerHTML = '<div class="loading">暂无数据</div>';
+                return;
+            }
+            
+            let html = '';
+            filtered.forEach((item, index) => {
+                const rank = index + 1;
+                const sourceClass = item.platform;
+                html += `
+                    <div class="news-card">
+                        <div class="news-rank">${rank}</div>
+                        <h3>
+                            <a href="${item.url}" target="_blank" rel="noopener noreferrer">
+                                ${item.title}
+                            </a>
+                        </h3>
+                        <div class="news-meta">
+                            <span class="news-source ${sourceClass}">${item.source}</span>
+                            <span class="news-hot">${item.hot || ''}</span>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            grid.innerHTML = html;
+        }
+        
+        // 更新时间
+        function updateUpdateTime() {
+            const now = new Date();
+            const timeStr = now.toLocaleString('zh-CN', {
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            document.getElementById('updateTime').textContent = '最后更新：' + timeStr;
+        }
+        
+        // 平台切换
+        document.getElementById('platformTabs').addEventListener('click', (e) => {
+            if (e.target.classList.contains('platform-tab')) {
+                document.querySelectorAll('.platform-tab').forEach(tab => {
+                    tab.classList.remove('active');
+                });
+                e.target.classList.add('active');
+                currentPlatform = e.target.dataset.platform;
+                renderNews();
+            }
+        });
+        
+        // 页面加载
+        loadNews();
+        
+        // 每 5 分钟刷新一次
+        setInterval(loadNews, 5 * 60 * 1000);
+    </script>
+</body>
+</html>
