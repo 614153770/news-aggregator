@@ -1,18 +1,10 @@
 [
   {
-    "title": "模拟微博热搜 1",
+    "title": "微博热搜数据获取中",
     "url": "https://s.weibo.com/",
     "source": "微博",
-    "hot": "模拟",
+    "hot": "⏳",
     "platform": "weibo",
-    "fetched_at": "2026-03-02T13:49:37.320773"
-  },
-  {
-    "title": "模拟微博热搜 2",
-    "url": "https://s.weibo.com/",
-    "source": "微博",
-    "hot": "模拟",
-    "platform": "weibo",
-    "fetched_at": "2026-03-02T13:49:37.320773"
+    "fetched_at": "2026-03-02T14:04:33.600712"
   }
 ]
